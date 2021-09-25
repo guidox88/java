@@ -60,5 +60,8 @@ let intentos = 5
 				}
 			}		
 		}
+	if(pass === pass){
+		alert("Lograstes ingresar Bienvenido")
+	}	
 
 	
