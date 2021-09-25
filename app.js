@@ -5,10 +5,11 @@ console.log(nombre);
 let apellido = prompt("Escribe tu apellido")
 console.log(apellido);
 
-let edad = Number(prompt("Escribe tu edad"))
+let edad = Number (prompt("Escribe tu edad"))
 console.log(edad);
 
 console.log(nombre + " " + apellido + " " + edad);
+
 
 
 let hola = "hola"
@@ -17,6 +18,7 @@ let menor = "Sos menor no podes ingresar al sitio"
 let mayor = "Sos mayor podes ingresar "
 let mmayor = "Sos muy mayor para ingresar"
 let admin = "sos admin"
+
 
  //alt + 60 <  alt + 62 >
 	if(edad >= 18 && edad <= 49) {
@@ -38,6 +40,25 @@ let admin = "sos admin"
 		alert(admin)
 	}
 
+let pass = Number(prompt("ingresa tu contraseña"))
+let dato = Number(prompt("pone tu contraseña para ingresar"))
+let intentos = 5
 
+	while (dato != pass && intentos > 0) {
+		alert(`La contraseña es incorrecta te quedan ${intentos} intentos`);
+		intentos --
+		dato = Number(prompt("ingresa nuevamente tu contraseña"))
 
+		let validar = confirm("¿Quieres cambiar la contraseña?")
 
+			if (validar) {
+				let passVieja = prompt( "ingresa tu contraseña anterior")
+				if(passVieja == pass){
+					pass = Number(prompt("ingresa tu nueva contraseña"))
+					alert("Atencion cambiastes tu contraseña");
+					dato = prompt("ingresa tu nueva contraseña para poder ingresar")	
+				}
+			}		
+		}
+
+	
