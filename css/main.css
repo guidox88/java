@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-image: url(../media/img/food.png); }
+
+.icon-lang {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../media/img/lang/arg.png); }
+
+
+
+.whatsapp-icon {
+  background-image: url(../media/img/whatsapp.png);
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  list-style: none; }
+  .whatsapp-icon:hover {
+    width: 50px;
+    height: 50px;
+    cursor: pointer; }
+
+.instagram-icon {
+  background-image: url(../media/img/instagram.png);
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  list-style: none; }
+  .instagram-icon:hover {
+    width: 50px;
+    height: 50px;
+    cursor: pointer; }
+
+
+ul {
+  text-align: center; }
+
+
+
+a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  
+    }
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  color: white; }
+
