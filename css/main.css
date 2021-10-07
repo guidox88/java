@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap");
-* {
+
+*{
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
+
 
 body {
   background-image: url(../media/img/food.png); }
@@ -15,27 +18,10 @@ body {
 
 
 
-.whatsapp-icon {
-  background-image: url(../media/img/whatsapp.png);
-  width: 40px;
-  height: 40px;
-  background-size: 100%;
-  list-style: none; }
-  .whatsapp-icon:hover {
-    width: 50px;
-    height: 50px;
-    cursor: pointer; }
-
-.instagram-icon {
-  background-image: url(../media/img/instagram.png);
-  width: 40px;
-  height: 40px;
-  background-size: 100%;
-  list-style: none; }
-  .instagram-icon:hover {
-    width: 50px;
-    height: 50px;
-    cursor: pointer; }
+body{
+  display: $d-flex;
+  
+}
 
 
 ul {
