@@ -1,56 +1,43 @@
+let listaObjetos;
+let imprimirDatos = document.getElementById("productosPrint")
 
-
-
-class Producto {
-	constructor(nombre,descripcion,precio) {
-		this.nombre = nombre;
-		this.descripcion = descripcion;
-		this.precio = precio;
-	}
+if (localStorage.getItem("lista") == null) {
+    alert("No tenes productos para mostrar")
+} else {
+    listaObjetos = JSON.parse(localStorage.getItem("lista"))
 }
 
-let lista =  [];
+listaObjetos.forEach(element => {
 
-	lista.push(new Producto ("pan","salvado", 200))
-	lista.push(new Producto ("pan","blanco", 300))
+    let index = listaObjetos.indexOf(element)
 
-const agregarProducto = () => {
+    imprimirDatos.innerHTML += `
+    <div class="card border-dark text-dark bg-light mx-1 mb-1" style="max-width: 18rem;"
+    <div class="card-body bg-light">
+        <h5 class="card-title">${element.nombre}</h5>
 
-	let nombre = prompt("Nombre del producto");
-	let descripcion =prompt("Descripcion del producto");
-	let precio = Number(prompt("Precio del producto"));
+        <h6 class="card-subtitle mb-2 text-muted"> ${element.categoria}</h6>
 
-	let producto = new Producto(nombre,descripcion,precio)
-	lista.push(producto)
-	
-	}
-agregarProducto()
-
-lista.sort((a,b) => {
-
-
-	if (a.precio > b.precio) {
-
-		return 1
-	}
+        <p class="card-text">$${element.precio}</p>
+        <p class="card-text">Stock: ${element.stock}</p>
+        <button class="card-link mb-2" onclick="comprar(${index})">Comprar</button>
+    </div>
+    </div>
+    `
+});
 
 
-	if (a.precio < b.precio) {
 
-		return -1
-	}
+const comprar = (index) => {
 
-	return 0
-})
-
-console.log(lista)
-
-
-lista.forEach(obj => {
-	console.log(obj.nombre);
-	console.log(obj.descripcion);
-	console.log(obj.precio);
-
-})
+    let carrito;
+    if (localStorage.getItem("carrito") == null) {
+        carrito = []
+    } else {
+        carrito = JSON.parse(localStorage.getItem("carrito"))
+    }
 
 
+    carrito.push(listaObjetos[index])
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+}
