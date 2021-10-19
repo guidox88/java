@@ -24,21 +24,3 @@ listaObjetos.forEach(element => {
 
     `
 });
-
-
-
-const finalizarCompra = () => {
-
-    let monto = 0
-
-    listaObjetos.forEach(e => {
-        monto += e.precio
-    })
-
-    console.log("Felicitaciones, tu compra fue aprobada, gastaste " + monto);
-    localStorage.removeItem("carrito")
-}
-
-btn.addEventListener("click", () => {
-    finalizarCompra()
-})

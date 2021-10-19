@@ -18,13 +18,15 @@ if (listaFiltrada.length != 0) {
 
         let index = listaFiltrada.indexOf(element)
         imprimirDatos.innerHTML += `
-        <div class="card border-dark text-dark bg-light mx-1 mb-1" style="max-width: 18rem;"
-        <div class="card-body">
-            <h5 class="card-title">${element.nombre}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${element.categoria}</h6>
-            <p class="card-text">${element.precio}</p>
-            <button class="card-link mb-2"  onclick="comprar(${index})">Comprar</button>
-        </div>
+        <div class="card border-success mb-3" style="max-width: 18rem;">
+         <div class="card-header">${element.nombre}</div>
+          <div class="card-body text-success">
+            <h5 class="card-title">${element.categoria}</h5>
+            
+            <p class="card-text">$${element.precio}</p>
+            <p class="card-text">Stock: ${element.stock}</p>
+            <button class="card-link mb-2" onclick="comprar(${index})">Comprar</button>
+          </div>
         </div>
         `
 
@@ -48,17 +50,4 @@ const comprar = (index) => {
 }
 
 
-/*
-        <div class="card col-4" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">${element.nombre}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${element.categoria}</h6>
-            <p class="card-text">${element.precio}</p>
-            <button class="card-link"  onclick="comprar(${index})">Comprar</button>
-        </div>
-        </div>
-        `
-
-
-*/
 

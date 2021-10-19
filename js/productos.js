@@ -12,18 +12,18 @@ listaObjetos.forEach(element => {
     let index = listaObjetos.indexOf(element)
 
     imprimirDatos.innerHTML += `
-    <div class="card border-dark text-dark bg-light mx-1 mb-1" style="max-width: 18rem;"
-    <div class="card-body bg-light">
-        <h5 class="card-title">${element.nombre}</h5>
 
-        <h6 class="card-subtitle mb-2 text-muted"> ${element.categoria}</h6>
-
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">${element.nombre}</div>
+      <div class="card-body text-success">
+        <h5 class="card-title">${element.categoria}</h5>
+        
         <p class="card-text">$${element.precio}</p>
         <p class="card-text">Stock: ${element.stock}</p>
         <button class="card-link mb-2" onclick="comprar(${index})">Comprar</button>
+      </div>
     </div>
-    </div>
-    `
+  `
 });
 
 
