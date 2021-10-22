@@ -18,7 +18,7 @@ if (listaFiltrada.length != 0) {
 
         let index = listaFiltrada.indexOf(element)
         imprimirDatos.innerHTML += `
-        <div class="card border-success mb-3" style="max-width: 18rem;">
+         <div class="card border-success p-1 m-1" style="max-width: 18rem;">
          <div class="card-header">${element.nombre}</div>
           <div class="card-body text-success">
             <h5 class="card-title">${element.categoria}</h5>
@@ -48,6 +48,3 @@ const comprar = (index) => {
     carrito.push(listaObjetos[index])
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
-
-
-

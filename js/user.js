@@ -92,8 +92,7 @@ listaObjetos.forEach(element => {
     let index = listaObjetos.indexOf(element)
 
     imprimirDatos.innerHTML += `
-
-    <div class="card border-success mb-3" style="max-width: 18rem;">
+    <div class="card border-success p-1 m-1" style="max-width: 18rem;">
       <div class="card-header">${element.nombre}</div>
       <div class="card-body text-success">
         <h5 class="card-title">${element.categoria}</h5>
@@ -105,6 +104,4 @@ listaObjetos.forEach(element => {
     </div>
   `
 });
-
-
 
