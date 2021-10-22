@@ -13,7 +13,7 @@ listaObjetos.forEach(element => {
 
     imprimirDatos.innerHTML += `
 
-    <div class="card border-success mb-3" style="max-width: 18rem;">
+    <div class="card border-success  " style="max-width: 18rem;">
       <div class="card-header">${element.nombre}</div>
       <div class="card-body text-success">
         <h5 class="card-title">${element.categoria}</h5>
