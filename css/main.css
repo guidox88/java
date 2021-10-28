@@ -1,10 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap");
-
-*{
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+* {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
+#cargando {
+  display: none; }
+
+  
+h1 {
+  font-family: "Abril Fatface", sans-serif;
+  padding: 20px; }
+
+h2 {
+  font-family: "Abril Fatface", sans-serif;
+  padding: 20px; }
+
+
+.scale:hover {
+  transform: scale(1.1, 1.1);
+  cursor: pointer; }
 
 body {
   background-image: url(../media/img/food.png); }
@@ -36,12 +50,12 @@ a {
   
     }
 
-h1, h2, h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2em;
-  color: white; }
 
 p { color :darkgreen;
   font-size: 1,5em;
  }
 
+ div img {
+  width: 25%;
+
+ }

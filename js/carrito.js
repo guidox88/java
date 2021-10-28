@@ -35,10 +35,13 @@ const finalizarCompra = () => {
         monto += e.precio
     })
 
-    console.log("Felicitaciones, tu compra fue aprobada, gastaste " + monto);
+    alert("Felicitaciones, tu compra fue aprobada, gastaste " + monto);
     localStorage.removeItem("carrito")
 }
 
 btn.addEventListener("click", () => {
     finalizarCompra()
 })
+ 
+
+
