@@ -21,6 +21,8 @@ class Producto {
 
 const guido = new User("guido", "nofx")
 
+
+
 let listaProductos;
 
 if (localStorage.getItem("lista") == null) {

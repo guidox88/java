@@ -1,4 +1,4 @@
-let listaObjetos;
+let listaCbjetos;
 let imprimirDatos = document.getElementById("productosPrint")
 
 if (localStorage.getItem("lista") == null) {
@@ -6,6 +6,8 @@ if (localStorage.getItem("lista") == null) {
 } else {
     listaObjetos = JSON.parse(localStorage.getItem("lista"))
 }
+
+
 
 listaObjetos.forEach(element => {
 

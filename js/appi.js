@@ -21,11 +21,16 @@ $("#elemento").on("click", ()=> {
 });
 
 
-$("#btn").on("click", ()=> {
-    console.log(document.getElementById("dato").value);
+$("#btna").on("click", ()=> {
+    console.log(document.getElementById("datoa").value);
+    
 });
 
 
+
+$("#btnb").on("click", ()=> {
+    console.log(document.getElementById("datob").value);
+});
 
 $("#ipt1").change((e) => {
     alert("El valor es" + " " + e.target.value );
