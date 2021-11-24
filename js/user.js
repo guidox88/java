@@ -14,6 +14,7 @@ class Producto {
         this.categoria = categoria;
         this.precio = precio;
         this.stock = stock;
+        this.img = "../media/img/aliomentoa.jpg"
     }
 
 }
@@ -94,16 +95,37 @@ listaObjetos.forEach(element => {
     let index = listaObjetos.indexOf(element)
 
     imprimirDatos.innerHTML += `
-    <div class="card border-success p-1 m-1" style="max-width: 18rem;">
+    <div class="card border-success p-1 m-1 conteiner-fluid row" style="max-width: 18rem;">
       <div class="card-header">${element.nombre}</div>
-      <div class="card-body text-success">
-        <h5 class="card-title">${element.categoria}</h5>
-        
+     
+      <div>
+        <img class="w-100" src="../media/img/alimentoa.jpg">
+      </div>
+
+     <div>
+      <div text-success">
+        <h5 class="card-title">${element.categoria}</h5>  
         <p class="card-text">$${element.precio}</p>
         <p class="card-text">Stock: ${element.stock}</p>
+      </div>
+       <div class = "text-center">   
         <button class="card-link mb-2" onclick="comprar(${index})">Comprar</button>
+        <button onclick="eliminarDeLaLista(${element.nombre})"> Eliminar </button>
+        
+        </div>
       </div>
     </div>
   `
 });
 
+const eliminarDeLaLista = (nombre) => {
+
+    let listaVieja = JSON.parse(localStorage.getItem("listaObjetos"))
+    let listaNueva = listaVieja.filter(e => e.index != index)
+
+    localStorage.setItem("listaObjetos", JSON.stringify(listaNueva))
+    location.reload()
+
+
+
+}

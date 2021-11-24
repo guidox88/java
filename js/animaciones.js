@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 $(".btn5").on("click", () => {
 
 	
@@ -33,30 +27,9 @@ $(".btn5").on("click", () => {
     const producto = new Producto(nombre, categoria, precio, stock)
     return producto
 	}
+})
 
-
-    let ciclo = true;
-
-            while (ciclo)
-            {
-
-                const nombre = prompt("ingrese nombre del producto");
-                const categoria = prompt("ingrese categoria del producto");
-                const precio = Number(prompt("ingrese precio del producto"));
-                const stock = parseInt(prompt("Ingrese la cantidad de productos"))
-
-                listaProductos.push(crearProducto(nombre, categoria, precio, stock))
-
-                localStorage.setItem("lista", JSON.stringify(listaProductos))
-
-                ciclo = confirm("Deseas agregar otro mas?")
-            }
-           
-    })
-
-
-
-
+    
 
 
 //modificar css con jquery
@@ -100,11 +73,11 @@ $("#carritoimg").animate({
 	width: `80px`,
 	
 
-},
+}),
 1000,
 function() {
 	console.log("fin de animacion");
-})
+}
 
 
 	
